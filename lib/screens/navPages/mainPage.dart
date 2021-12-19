@@ -81,7 +81,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                   Container(
                       padding: const EdgeInsets.only(bottom: 10),
                       child: Text(
-                        "Inspiration",
+                        "Emotion",
                         style: TextStyle(
                           fontSize: 16,
                         ),
