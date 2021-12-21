@@ -11,6 +11,12 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
+  var images = {
+    "balloning.png":"Balloning",
+    "hiking.png":"Hiking",
+    "kayaking.png":"Kayaking",
+    "snorkling.png":"Snorkling"
+  };
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
@@ -153,20 +159,20 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                     child: Column(
                       children: [
                         Container(
-                          width: 90,
-                          height: 90,
+                          width: 70,
+                          height: 70,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.white,
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage("images/mountain.jpeg"),
+                                image: AssetImage("images/"+images.keys.elementAt(index)),
                               )),
                         ),
                         SizedBox(height: 10),
                         Container(
                           child: AppText(
-                            text: "Kayaking",
+                            text: images.values.elementAt(index),
                             size: 14,
                           )
                         )
