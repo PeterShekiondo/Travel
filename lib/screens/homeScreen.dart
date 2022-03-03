@@ -6,7 +6,7 @@ import 'package:travel/screens/navPages/reportPage.dart';
 import 'package:travel/screens/navPages/searchPage.dart';
 
 class HomeScreen extends StatefulWidget {
-  List pages = [
+ final List pages = [
     AccountPage(),
     ReportPage(),
     SearchPage(),

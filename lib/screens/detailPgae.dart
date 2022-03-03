@@ -48,14 +48,14 @@ class _DetailPageState extends State<DetailPage> {
             Positioned(
               top: 330,
               child: Container(
-                padding: const EdgeInsets.only(top: 35, left:20, right: 20),
+                padding: const EdgeInsets.only(top: 30, left:20, right: 20),
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(35),
-                    topRight: Radius.circular(35)
+                    topRight: Radius.circular(35 )
                   )
                 ),
                 child: Column(
@@ -65,6 +65,14 @@ class _DetailPageState extends State<DetailPage> {
                       children: [
                         AppText(text:"Yosemite", size: 25, weight: FontWeight.bold, color: Colors.black.withOpacity(.8)),
                         AppText(text:"\$ 250", size: 25, weight: FontWeight.bold, color: AppColors.mainColor),
+                      ],
+                    ),
+                    SizedBox(height: 10,),
+                    Row(
+                      children: [
+                        Icon(Icons.location_on, size: 16, color: AppColors.mainColor,),
+                        SizedBox(width: 5,),
+                        AppText(text: "Dar es salaam, Tanzania", size: 16, color: AppColors.textColor1,)
                       ],
                     )
                   ],
